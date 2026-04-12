@@ -3,31 +3,44 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Terminal portfolio for Isaac (Zac) Adjei — Electronic Engineering and CS at Aston University" />
+    <meta
+      name="description"
+      content="Terminal portfolio for Isaac (Zac) Adjei — Electronic Engineering and CS at Aston University"
+    />
     <meta name="author" content="Isaac Adjei" />
     <title>Zaccess</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <style>
       /* ── Reset ─────────────────────────────────── */
-      *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-
-      :root {
-        --bg:         #000000;
-        --text:       #06ffa5;
-        --out-text:   #c8c8c8;
-        --prompt:     #00f5ff;
-        --command:    #06ffa5;
-        --label:      #00f5ff;
-        --muted:      #555555;
-        --error:      #ff5555;
-        --border:     #ffff00;
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
 
-      html, body {
+      :root {
+        --bg: #000000;
+        --text: #06ffa5;
+        --out-text: #c8c8c8;
+        --prompt: #00f5ff;
+        --command: #06ffa5;
+        --label: #00f5ff;
+        --muted: #555555;
+        --error: #ff5555;
+        --border: #ffff00;
+      }
+
+      html,
+      body {
         width: 100%;
         min-height: 100vh;
         font-family: 'JetBrains Mono', 'Courier New', monospace;
@@ -37,7 +50,9 @@
         overflow-x: hidden;
       }
 
-      body { padding: 1rem; }
+      body {
+        padding: 1rem;
+      }
 
       /* ── Banner ─────────────────────────────────── */
       .banner {
@@ -143,12 +158,20 @@
         border-radius: 50%;
         border: none;
         cursor: pointer;
-        transition: filter 0.15s ease, transform 0.15s ease;
+        transition:
+          filter 0.15s ease,
+          transform 0.15s ease;
       }
 
-      .terminal-btn:nth-child(1) { background: #ff5f56; }
-      .terminal-btn:nth-child(2) { background: #ffbd2e; }
-      .terminal-btn:nth-child(3) { background: #27c93f; }
+      .terminal-btn:nth-child(1) {
+        background: #ff5f56;
+      }
+      .terminal-btn:nth-child(2) {
+        background: #ffbd2e;
+      }
+      .terminal-btn:nth-child(3) {
+        background: #27c93f;
+      }
 
       .terminal-btn:hover {
         filter: brightness(1.25);
@@ -168,8 +191,12 @@
         flex-direction: column;
       }
 
-      .terminal-content::-webkit-scrollbar { width: 5px; }
-      .terminal-content::-webkit-scrollbar-track { background: transparent; }
+      .terminal-content::-webkit-scrollbar {
+        width: 5px;
+      }
+      .terminal-content::-webkit-scrollbar-track {
+        background: transparent;
+      }
       .terminal-content::-webkit-scrollbar-thumb {
         background: rgba(255, 255, 0, 0.25);
         border-radius: 3px;
@@ -177,7 +204,10 @@
       .terminal-content::-webkit-scrollbar-thumb:hover {
         background: rgba(255, 255, 0, 0.45);
       }
-      * { scrollbar-width: thin; scrollbar-color: rgba(255, 255, 0, 0.25) transparent; }
+      * {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(255, 255, 0, 0.25) transparent;
+      }
 
       /* ── Command echo line ──────────────────────── */
       .cmd-echo {
@@ -229,10 +259,18 @@
       }
 
       /* ── Inline spans ───────────────────────────── */
-      .lbl { color: var(--label); }
-      .arr { color: var(--prompt); }
-      .err { color: var(--error); }
-      .dim { color: var(--muted); }
+      .lbl {
+        color: var(--label);
+      }
+      .arr {
+        color: var(--prompt);
+      }
+      .err {
+        color: var(--error);
+      }
+      .dim {
+        color: var(--muted);
+      }
 
       /* ── Links in output ────────────────────────── */
       a {
@@ -295,8 +333,13 @@
       }
 
       @keyframes cursorBlink {
-        0%, 100% { opacity: 1; }
-        50%       { opacity: 0; }
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
       }
 
       /* Hidden but focusable input */
@@ -315,20 +358,31 @@
 
       /* ── Responsive ─────────────────────────────── */
       @media (max-width: 768px) {
-        body { padding: 0.5rem; }
-        .terminal-wrapper { max-height: 92vh; }
-        .terminal-content { padding: 1rem 1rem 0.5rem; }
-        .terminal-input-area { padding: 0.75rem 1rem; }
-        .banner { padding: 1rem; }
+        body {
+          padding: 0.5rem;
+        }
+        .terminal-wrapper {
+          max-height: 92vh;
+        }
+        .terminal-content {
+          padding: 1rem 1rem 0.5rem;
+        }
+        .terminal-input-area {
+          padding: 0.75rem 1rem;
+        }
+        .banner {
+          padding: 1rem;
+        }
       }
     </style>
   </head>
   <body>
-
     <!-- Banner -->
     <div class="banner" id="banner">
       <div class="banner-title">[ SITE UNDER CONSTRUCTION ]</div>
-      <div class="banner-text">portfolio being rebuilt — use the terminal below to explore</div>
+      <div class="banner-text">
+        portfolio being rebuilt — use the terminal below to explore
+      </div>
       <div class="banner-media">
         <img src="giphy.gif" alt="Loading animation" loading="lazy" />
       </div>
@@ -342,9 +396,9 @@
       <div class="terminal-titlebar">
         <span class="terminal-title">zacess@portfolio — bash — 80x24</span>
         <div class="terminal-buttons">
-          <button class="terminal-btn" id="btnClose"  title="close"></button>
-          <button class="terminal-btn" id="btnMin"    title="minimise"></button>
-          <button class="terminal-btn" id="btnMax"    title="maximise"></button>
+          <button class="terminal-btn" id="btnClose" title="close"></button>
+          <button class="terminal-btn" id="btnMin" title="minimise"></button>
+          <button class="terminal-btn" id="btnMax" title="maximise"></button>
         </div>
       </div>
 
@@ -361,29 +415,26 @@
 
     <script>
       // ── DOM refs ──────────────────────────────────
-      const out      = document.getElementById('terminalOutput');
-      const input    = document.getElementById('terminalInput');
-      const mirror   = document.getElementById('inputMirror');
-      const cursor   = document.getElementById('cursor');
-      const wrapper  = document.getElementById('terminalWrapper');
+      const out = document.getElementById('terminalOutput');
+      const input = document.getElementById('terminalInput');
+      const mirror = document.getElementById('inputMirror');
+      const cursor = document.getElementById('cursor');
+      const wrapper = document.getElementById('terminalWrapper');
 
       // ── State ─────────────────────────────────────
       let cmdHistory = [];
-      let histIdx    = -1;
-      let busy       = false;
+      let histIdx = -1;
+      let busy = false;
 
       // ── Helpers ───────────────────────────────────
-      const sleep = ms => new Promise(r => setTimeout(r, ms));
+      const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
       function scrollBottom() {
         out.scrollTop = out.scrollHeight;
       }
 
       function escHtml(s) {
-        return s
-          .replace(/&/g, '&amp;')
-          .replace(/</g, '&lt;')
-          .replace(/>/g, '&gt;');
+        return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
       }
 
       function updateMirror(val) {
@@ -391,7 +442,7 @@
       }
 
       function setBusy(state) {
-        busy  = state;
+        busy = state;
         input.disabled = state;
         if (state) {
           cursor.classList.add('busy');
@@ -441,7 +492,6 @@
       // Each command is an array of HTML strings (one per output line).
       // '' = blank spacer line.
       const commands = {
-
         help: [
           '<span class="lbl">available commands:</span>',
           '',
@@ -639,7 +689,6 @@
 
         // clear is handled specially in runCommand — entry here ensures tab completion works
         clear: [],
-
       };
 
       const cmdList = Object.keys(commands);
@@ -669,8 +718,12 @@
         await sleep(90); // execution delay — feels like it's running
 
         if (!commands[name]) {
-          appendOut(`<span class="err">bash: ${escHtml(name)}: command not found</span>`);
-          appendOut(`<span class="dim">type &#39;help&#39; to list available commands</span>`);
+          appendOut(
+            `<span class="err">bash: ${escHtml(name)}: command not found</span>`,
+          );
+          appendOut(
+            `<span class="dim">type &#39;help&#39; to list available commands</span>`,
+          );
         } else {
           await printLines(commands[name]);
         }
@@ -681,7 +734,6 @@
 
       // ── Input events ──────────────────────────────
       input.addEventListener('keydown', function (e) {
-
         if (e.key === 'Enter') {
           e.preventDefault();
           const val = this.value.trim();
@@ -721,7 +773,7 @@
           e.preventDefault();
           const partial = this.value.trim().toLowerCase();
           if (!partial) return;
-          const matches = cmdList.filter(c => c.startsWith(partial));
+          const matches = cmdList.filter((c) => c.startsWith(partial));
           if (matches.length === 1) {
             this.value = matches[0];
             updateMirror(this.value);
@@ -738,7 +790,6 @@
           }
           return;
         }
-
       });
 
       input.addEventListener('input', function () {
@@ -759,10 +810,10 @@
 
       document.getElementById('btnMin').addEventListener('click', function (e) {
         e.stopPropagation();
-        const content  = document.getElementById('terminalOutput');
+        const content = document.getElementById('terminalOutput');
         const inputBar = document.querySelector('.terminal-input-area');
-        const isMin    = content.style.display === 'none';
-        content.style.display  = isMin ? '' : 'none';
+        const isMin = content.style.display === 'none';
+        content.style.display = isMin ? '' : 'none';
         inputBar.style.display = isMin ? '' : 'none';
       });
 
@@ -771,16 +822,31 @@
         const banner = document.getElementById('banner');
         if (wrapper._maximised) {
           Object.assign(wrapper.style, {
-            position: '', top: '', left: '', right: '', bottom: '',
-            maxWidth: '', maxHeight: '', zIndex: '', margin: '', border: '',
+            position: '',
+            top: '',
+            left: '',
+            right: '',
+            bottom: '',
+            maxWidth: '',
+            maxHeight: '',
+            zIndex: '',
+            margin: '',
+            border: '',
           });
           banner.style.display = '';
           document.body.style.padding = '';
           wrapper._maximised = false;
         } else {
           Object.assign(wrapper.style, {
-            position: 'fixed', top: '0', left: '0', right: '0', bottom: '0',
-            maxWidth: '100%', maxHeight: '100%', zIndex: '9999', margin: '0',
+            position: 'fixed',
+            top: '0',
+            left: '0',
+            right: '0',
+            bottom: '0',
+            maxWidth: '100%',
+            maxHeight: '100%',
+            zIndex: '9999',
+            margin: '0',
             border: 'none',
           });
           banner.style.display = 'none';
