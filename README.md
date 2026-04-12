@@ -60,7 +60,7 @@ The design philosophy: **authenticity over aesthetics**. Every interaction - the
 | Feature | Detail |
 |---|---|
 | Hosting | Cloudflare Pages |
-| Custom domain | zacess.com / www.zacess.com |
+| Custom domain | [zacess.com](https://zacess.com) / [www.zacess.com](https://www.zacess.com) |
 | Auto-deploy | On push to `main` |
 | Load time | < 1s (single file, no JS bundles) |
 
