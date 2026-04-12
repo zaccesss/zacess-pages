@@ -134,9 +134,9 @@ Type any of the following into the terminal input:
 
 <div align="center">
 
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="50" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="50" /> | <img src="https://techstack-generator.vercel.app/js-icon.svg" width="50" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg" width="50" /> |
-|:---:|:---:|:---:|:---:|
-| **HTML5** | **CSS3** | **Vanilla JS** | **Cloudflare Pages** |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="65" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="65" /> | <img src="https://techstack-generator.vercel.app/js-icon.svg" width="65" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="65" /> | <img src="https://techstack-generator.vercel.app/github-icon.svg" width="65" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="65" /> |
+|:---:|:---:|:---:|:---:|:---:|:---:|
+| **HTML5** | **CSS3** | **JavaScript** | **Git** | **GitHub** | **VS Code** |
 
 </div>
 
