@@ -20,8 +20,6 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/github/last-commit/zaccesss/zacess-pages?style=flat&color=green" alt="last commit" />
-  <img src="https://img.shields.io/github/repo-size/zaccesss/zacess-pages?style=flat&color=blue" alt="repo size" />
   <img src="https://img.shields.io/badge/deployment-Cloudflare_Pages-orange?style=flat&logo=cloudflare" />
   <img src="https://img.shields.io/badge/status-live-brightgreen?style=flat" />
 </p>
@@ -48,16 +46,14 @@
 
 **zacess-pages** is a terminal-style portfolio landing page built to feel like a real CLI session in the browser. It serves as a professional placeholder while the full portfolio is in development.
 
-The entire site is a **single HTML file** — no frameworks, no build tools, no dependencies beyond a Google Font. Everything runs in the browser with vanilla HTML, CSS, and JavaScript.
+The entire site is a **single HTML file** - no frameworks, no build tools, no dependencies beyond a Google Font. Everything runs in the browser with vanilla HTML, CSS, and JavaScript.
 
-The design philosophy: **authenticity over aesthetics**. Every interaction — the boot sequence, the blinking cursor, the line-by-line output, the command history — is designed to behave like a real terminal, not a styled webpage pretending to be one.
+The design philosophy: **authenticity over aesthetics**. Every interaction - the boot sequence, the blinking cursor, the line-by-line output, the command history - is designed to behave like a real terminal, not a styled webpage pretending to be one.
 
 ---
 
 <a id="live-demo"></a>
 ## Live Demo
-
-**[zacess.com](https://zacess.com)**
 
 <div align="center">
 
@@ -76,19 +72,19 @@ The design philosophy: **authenticity over aesthetics**. Every interaction — t
 ## Features
 
 ### Behaviour
-- **Boot sequence** — ZacessOS system lines appear on load before the terminal is ready
-- **Line-by-line output** — responses print with a 22ms delay per line, 90ms execution pause before any output
-- **Command history** — Up / Down arrow keys cycle through previously run commands
-- **Tab autocomplete** — completes if one match, lists all matches if multiple
-- **Click-to-focus** — clicking anywhere on the page focuses the input, no mouse targeting needed
-- **XSS-safe echo** — user input is HTML-escaped before being echoed back to the terminal
+- **Boot sequence** - ZacessOS system lines appear on load before the terminal is ready
+- **Line-by-line output** - responses print with a 22ms delay per line, 90ms execution pause before any output
+- **Command history** - Up / Down arrow keys cycle through previously run commands
+- **Tab autocomplete** - completes if one match, lists all matches if multiple
+- **Click-to-focus** - clicking anywhere on the page focuses the input, no mouse targeting needed
+- **XSS-safe echo** - user input is HTML-escaped before being echoed back to the terminal
 
 ### Visual
-- **Blinking block cursor** (`▊`) — real input is hidden off-screen, text mirrors into a visible span
-- **Three-layer colour scheme** — cyan prompt, green command, grey output
-- **Subtle glow** — yellow border shadow gives the terminal window depth without being flashy
-- **Custom scrollbar** — styled to match the terminal colour palette
-- **Responsive** — works on mobile with a collapsed layout at 768px
+- **Blinking block cursor** (`▊`) - real input is hidden off-screen, text mirrors into a visible span
+- **Three-layer colour scheme** - cyan prompt, green command, grey output
+- **Subtle glow** - yellow border shadow gives the terminal window depth without being flashy
+- **Custom scrollbar** - styled to match the terminal colour palette
+- **Responsive** - works on mobile with a collapsed layout at 768px
 
 ### Window controls
 | Button | Colour | Behaviour |
@@ -124,7 +120,7 @@ Type any of the following into the terminal input:
 |---|---|
 | `Enter` | Run command |
 | `↑` / `↓` | Cycle through command history |
-| `Tab` | Autocomplete — completes or lists matches |
+| `Tab` | Autocomplete - completes or lists matches |
 | Click anywhere | Focus the input |
 
 ---
@@ -134,17 +130,17 @@ Type any of the following into the terminal input:
 
 <div align="center">
 
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="65" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="65" /> | <img src="https://techstack-generator.vercel.app/js-icon.svg" width="65" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="65" /> | <img src="https://techstack-generator.vercel.app/github-icon.svg" width="65" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="65" /> |
-|:---:|:---:|:---:|:---:|:---:|:---:|
-| **HTML5** | **CSS3** | **JavaScript** | **Git** | **GitHub** | **VS Code** |
+| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="65" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="65" /> | <img src="https://techstack-generator.vercel.app/js-icon.svg" width="65" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="65" /> | <img src="https://techstack-generator.vercel.app/github-icon.svg" width="65" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="65" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg" width="65" /> |
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| **HTML5** | **CSS3** | **JavaScript** | **Git** | **GitHub** | **VS Code** | **Cloudflare** |
 
 </div>
 
-- **No frameworks** — zero React, Vue, or any other library
-- **No build step** — open `index.html` in a browser and it works
-- **No package.json** — nothing to install
-- **Font** — JetBrains Mono via Google Fonts (preconnected for performance)
-- **Deployment** — Cloudflare Pages, auto-deploys on push to `main`
+- **No frameworks** - zero React, Vue, or any other library
+- **No build step** - open `index.html` in a browser and it works
+- **No package.json** - nothing to install
+- **Font** - JetBrains Mono via Google Fonts (preconnected for performance)
+- **Deployment** - Cloudflare Pages, auto-deploys on push to `main`
 
 ---
 
@@ -154,7 +150,7 @@ Type any of the following into the terminal input:
 ```
 zacess-pages/
 │
-├── index.html      # entire site — HTML, CSS, and JS in one file
+├── index.html      # entire site - HTML, CSS, and JS in one file
 ├── giphy.gif       # banner animation (under construction)
 ├── cv.pdf          # cv download target (replace with your own)
 └── README.md       # this file
@@ -167,21 +163,21 @@ index.html
 ├── <head>
 │   ├── meta tags + SEO
 │   ├── Google Fonts (JetBrains Mono)
-│   └── <style> — all CSS, organised by section
+│   └── <style> - all CSS, organised by section
 └── <body>
-    ├── .banner — under construction notice + GIF
+    ├── .banner - under construction notice + GIF
     ├── .terminal-wrapper
-    │   ├── .terminal-titlebar — title + window buttons
-    │   ├── .terminal-content — output area (built by JS)
-    │   └── .terminal-input-area — prompt + mirror + hidden input
+    │   ├── .terminal-titlebar - title + window buttons
+    │   ├── .terminal-content - output area (built by JS)
+    │   └── .terminal-input-area - prompt + mirror + hidden input
     └── <script>
         ├── DOM refs + state
         ├── Helper functions
-        ├── commands{} — all command data as HTML string arrays
-        ├── runCommand() — async command runner with delay
+        ├── commands{} - all command data as HTML string arrays
+        ├── runCommand() - async command runner with delay
         ├── Input event listeners (keydown, input)
         ├── Window button handlers
-        └── boot() — startup sequence
+        └── boot() - startup sequence
 ```
 
 ---
@@ -189,7 +185,7 @@ index.html
 <a id="updating-content"></a>
 ## Updating Content
 
-All command output lives in the `commands` object inside the `<script>` tag in `index.html`. Each command is an array of HTML strings — one string per output line. An empty string `''` inserts a blank spacer line.
+All command output lives in the `commands` object inside the `<script>` tag in `index.html`. Each command is an array of HTML strings - one string per output line. An empty string `''` inserts a blank spacer line.
 
 ### Editing an existing command
 
@@ -205,7 +201,7 @@ whoiszac: [
 
 ### Adding a new command
 
-**Step 1** — add the command to the `commands` object:
+**Step 1** - add the command to the `commands` object:
 
 ```js
 mycommand: [
@@ -216,7 +212,7 @@ mycommand: [
 ],
 ```
 
-**Step 2** — add it to the `help` command array so it appears in the help list:
+**Step 2** - add it to the `help` command array so it appears in the help list:
 
 ```js
 help: [
@@ -225,7 +221,7 @@ help: [
 ],
 ```
 
-Tab completion picks it up automatically — no extra wiring needed.
+Tab completion picks it up automatically - no extra wiring needed.
 
 ### CSS classes available in output
 
@@ -284,6 +280,6 @@ Cloudflare picks it up within ~30 seconds.
 </p>
 
 <p align="center">
-  Built by <a href="https://zacess.com"><strong>Isaac (Zac) Adjei</strong></a> —
+  Built by <a href="https://zacess.com"><strong>Isaac (Zac) Adjei</strong></a> -
   <a href="mailto:contact@zacess.com">contact@zacess.com</a>
 </p>
