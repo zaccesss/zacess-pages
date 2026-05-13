@@ -332,6 +332,12 @@ No environment variables are required. The ZenQuotes API is public and proxied t
 
 ---
 
+## Contact and Support
+
+Open an [issue](https://github.com/zaccesss/zacess-pages/issues) in this repository for questions or bugs.
+
+You can also reach me directly at [contact@isaacadjei.me](mailto:contact@isaacadjei.me) or via my [website contact page](https://isaacadjei.me/contact).
+
 <!-- Footer -->
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=footer" />
