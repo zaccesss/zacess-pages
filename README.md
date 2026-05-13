@@ -45,7 +45,7 @@
 <a id="overview"></a>
 ## Overview
 
-**zacess-pages** is a terminal-style browser interface that serves as the landing page for [zacess.com](https://zacess.com) while the full site is being rebuilt. It behaves like a real CLI session — boot sequence, blinking cursor, line-by-line output, command history, tab autocomplete — everything modelled after a genuine terminal, not a styled webpage pretending to be one.
+**zacess-pages** is a terminal-style browser interface that serves as the landing page for [zacess.com](https://zacess.com) while the full site is being rebuilt. It behaves like a real CLI session - boot sequence, blinking cursor, line-by-line output, command history, tab autocomplete - everything modelled after a genuine terminal, not a styled webpage pretending to be one.
 
 Commands navigate to pages on the main portfolio at [isaacadjei.me](https://isaacadjei.me) or run local interactions like downloading a CV, opening a mail client, or collecting suggestions. A daily motivation quote is pulled from the ZenQuotes API and displayed at the bottom.
 
