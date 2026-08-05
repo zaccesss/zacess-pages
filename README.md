@@ -9,6 +9,9 @@ Most commands navigate to pages on my portfolio at [isaacadjei.me](https://isaac
 
 Built with Next.js App Router, TypeScript, Tailwind CSS and a server-side API route.
 
+> [!NOTE]
+> This is a placeholder, not the finished zacess.com. Type `status` in the terminal for the current build state, or `help` for the full command list.
+
 ## Features
 
 **Terminal behaviour**
