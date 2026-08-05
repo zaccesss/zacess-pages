@@ -1,111 +1,48 @@
-<!-- Header -->
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=header&text=zacess-pages&fontSize=38&fontAlignY=32&fontColor=ffffff&animation=bounce" />
-</p>
+# zacess-pages
 
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=20&pause=1200&color=06ffa5&center=true&vCenter=true&width=650&height=50&lines=Terminal-style+landing+page+for+zacess.com;Built+with+Next.js+14+%7C+TypeScript+%7C+Tailwind+CSS;Interactive+CLI+in+the+browser;Live+at+zacess.com" />
-</p>
+[![License: PolyForm Noncommercial](https://img.shields.io/badge/license-PolyForm%20Noncommercial-blue)](LICENSE)
+[![Live: zacess.com](https://img.shields.io/badge/live-zacess.com-brightgreen)](https://zacess.com)
 
-<p align="center">
-  <a href="https://zacess.com">
-    <img src="https://img.shields.io/badge/Live-zacess.com-000000?style=for-the-badge&logo=googlechrome&logoColor=06ffa5">
-  </a>
-  <a href="https://github.com/zaccesss/zacess-pages">
-    <img src="https://img.shields.io/badge/Repo-zacess--pages-ffff00?style=for-the-badge&logo=github&logoColor=black">
-  </a>
-  <a href="mailto:contact@zacess.com">
-    <img src="https://img.shields.io/badge/Contact-contact@zacess.com-ff6f61?style=for-the-badge&logo=gmail&logoColor=white">
-  </a>
-</p>
+I built this as the landing page for [zacess.com](https://zacess.com) while I rebuild the full site. Instead of a static "under construction" page, it is a real terminal in the browser: boot sequence, blinking cursor, line-by-line output, command history and tab autocomplete, everything modelled after an actual CLI session rather than a styled page pretending to be one.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/deployment-Vercel-000000?style=flat&logo=vercel&logoColor=white" />
-  <img src="https://img.shields.io/badge/DNS-Cloudflare-f48024?style=flat&logo=cloudflare&logoColor=white" />
-  <img src="https://img.shields.io/badge/status-live-brightgreen?style=flat" />
-</p>
+Most commands navigate to pages on my portfolio at [isaacadjei.me](https://isaacadjei.me) while a few run local interactions like downloading my CV, opening a mail client or collecting a suggestion. A daily motivation quote from the ZenQuotes API sits underneath the terminal and refreshes every 30 minutes.
 
----
+Built with Next.js App Router, TypeScript, Tailwind CSS and a server-side API route.
 
-<p align="center">
-  <b>Quick navigation:</b><br/>
-  <a href="#overview">Overview</a> •
-  <a href="#live-demo">Live Demo</a> •
-  <a href="#features">Features</a> •
-  <a href="#commands">Commands</a> •
-  <a href="#tech-stack">Tech Stack</a> •
-  <a href="#file-structure">File Structure</a> •
-  <a href="#updating-content">Updating Content</a> •
-  <a href="#deployment">Deployment</a> •
-  <a href="#roadmap">Roadmap</a>
-</p>
-
----
-
-<a id="overview"></a>
-## Overview
-
-**zacess-pages** is a terminal-style browser interface that serves as the landing page for [zacess.com](https://zacess.com) while the full site is being rebuilt. It behaves like a real CLI session - boot sequence, blinking cursor, line-by-line output, command history, tab autocomplete - everything modelled after a genuine terminal, not a styled webpage pretending to be one.
-
-Commands navigate to pages on the main portfolio at [isaacadjei.me](https://isaacadjei.me) or run local interactions like downloading a CV, opening a mail client, or collecting suggestions. A daily motivation quote is pulled from the ZenQuotes API and displayed at the bottom.
-
-Built as a proper **Next.js 14 App Router** application with TypeScript, Tailwind CSS and server-side API routes.
-
----
-
-<a id="live-demo"></a>
-## Live Demo
-
-<div align="center">
-
-| Feature | Detail |
-|---|---|
-| Hosting | Vercel |
-| DNS | Cloudflare |
-| Custom domain | [zacess.com](https://zacess.com) / [www.zacess.com](https://www.zacess.com) |
-| Auto-deploy | On push to `main` |
-| Quote API | ZenQuotes, proxied via `/api/quote`, refreshes every 30 min |
-
-</div>
-
----
-
-<a id="features"></a>
 ## Features
 
-### Terminal behaviour
-- **Boot sequence** - ZacessOS system lines appear on load with staggered delays before the prompt is ready
-- **Line-by-line output** - responses print with a 20ms delay per line, 90ms execution pause before any output starts
-- **Command history** - Up / Down arrow keys cycle through previously entered commands
-- **Tab autocomplete** - completes on a single match, lists all matches when there are multiple
-- **Suggest mode** - interactive prompt that collects a suggestion and fires a pre-filled mailto link
-- **Clear preserves boot** - `clear` wipes only post-boot output, keeping the system lines intact
-- **XSS-safe echo** - user input is HTML-escaped before being echoed back into the terminal
+**Terminal behaviour**
 
-### Visual
-- **Blinking block cursor** (`▊`) - real input is hidden off-screen, text mirrors into a visible span
-- **Three-layer colour scheme** - cyan prompt, green commands, amber output
-- **Subtle terminal glow** - yellow border shadow gives the window depth
-- **Custom scrollbar** - styled to match the terminal palette
-- **Dark / light mode** - toggle in the top right, terminal colours never change regardless of theme
-- **Responsive** - mobile layout with a tap-to-type hint on touch devices
+- Boot sequence: a short ZacessOS status readout prints on load before the prompt is ready
+- Line-by-line output: each response line prints with a short delay rather than appearing all at once
+- Command history: the up and down arrow keys cycle through previously entered commands
+- Tab autocomplete: completes on a single match, lists all matches when there is more than one
+- Suggest mode: an interactive prompt that collects a suggestion and opens a pre-filled mailto link
+- `clear` wipes only the output typed after boot, keeping the boot lines intact
+- Typed input is HTML-escaped before being echoed back, so it can't inject markup into the output
 
-### Window controls
-| Button | Colour | Behaviour |
+**Visual**
+
+- A blinking block cursor, with the real input hidden off-screen and its text mirrored into a visible span
+- A three-colour scheme: cyan for prompts, green for commands, amber for output
+- A custom scrollbar styled to match the terminal palette
+- Dark and light mode toggle in the top right, though the terminal's own colours stay the same in both
+- A responsive layout with a tap-to-type hint on touch devices
+
+**Window controls**
+
+| Control | Colour | Behaviour |
 |---|---|---|
-| Close | Red | Collapses to a restore button |
-| Minimise | Yellow | Collapses content, keeps titlebar visible |
-| Maximise | Green | Full viewport overlay |
-| `+` | Yellow | Opens a fresh terminal session |
+| Close | Red | Collapses the terminal to a restore button |
+| Minimise | Yellow | Hides the content, keeps the titlebar visible |
+| Maximise | Green | Expands to a full viewport overlay |
+| `+` | Yellow | Opens a fresh terminal session with a new boot sequence |
 
----
-
-<a id="commands"></a>
 ## Commands
 
-Type any of the following into the terminal input:
+Type any of the following into the terminal input.
 
-### Navigate -- opens isaacadjei.me
+Navigate, opens isaacadjei.me:
 
 | Command | Description |
 |---|---|
@@ -118,19 +55,19 @@ Type any of the following into the terminal input:
 | `contact` | Get in touch |
 | `links` | GitHub, LinkedIn and more |
 
-### Local
+Local:
 
 | Command | Description |
 |---|---|
 | `journey` | Background and story |
 | `cv` | Download CV (PDF) |
-| `collaborate` | Work with me -- opens mail client |
+| `collaborate` | Work with me, opens a mail client |
 | `suggest` | Suggest what to build next |
 | `status` | Site build status |
 | `clear` | Clear the terminal |
 | `help` | Show all commands |
 
-### Unlockables -- if you know, you know
+Unlockables, if you know, you know:
 
 | Command | Description |
 |---|---|
@@ -138,52 +75,23 @@ Type any of the following into the terminal input:
 | `sudo` | Try your luck |
 | `whoami` | Good question |
 
-**Keyboard shortcuts:**
+Keyboard shortcuts: `Enter` runs a command, `↑` and `↓` cycle history, `Tab` autocompletes and clicking anywhere in the terminal focuses the input.
 
-| Key | Action |
-|---|---|
-| `Enter` | Run command |
-| `↑` / `↓` | Cycle through command history |
-| `Tab` | Autocomplete |
-| Click anywhere | Focus the input |
+## Tech stack
 
----
+- **Framework**: Next.js App Router with TypeScript
+- **UI**: React
+- **Styling**: Tailwind CSS, with CSS custom properties for the terminal palette
+- **Font**: JetBrains Mono via `next/font/google`
+- **Theming**: next-themes, dark mode by default
+- **Quote API**: ZenQuotes, proxied through a Next.js API route to avoid CORS
+- **Deployment**: Vercel, auto-deploys on push to `main`
+- **DNS**: Cloudflare
 
-<a id="tech-stack"></a>
-## Tech Stack
-
-<div align="center">
-
-| <img src="https://techstack-generator.vercel.app/react-icon.svg" width="65" /> | <img src="https://techstack-generator.vercel.app/ts-icon.svg" width="65" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" width="65" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="65" /> | <img src="https://techstack-generator.vercel.app/github-icon.svg" width="65" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="65" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" width="65" /> |
-|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **React 18** | **TypeScript** | **Next.js 14** | **Tailwind CSS** | **GitHub** | **Git** | **VS Code** |
-
-</div>
-
-<div align="center">
-
-| <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg" width="65" /> | <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cloudflare/cloudflare-original.svg" width="65" /> |
-|:---:|:---:|
-| **Vercel** | **Cloudflare** |
-
-</div>
-
-- **Framework** - Next.js 14 App Router with TypeScript
-- **Styling** - Tailwind CSS v3, CSS custom properties for the terminal palette
-- **Font** - JetBrains Mono via `next/font/google`
-- **Theming** - next-themes, dark mode by default
-- **Quote API** - ZenQuotes, proxied through a Next.js API route to avoid CORS
-- **Deployment** - Vercel, auto-deploys on push to `main`
-- **DNS** - Cloudflare
-
----
-
-<a id="file-structure"></a>
-## File Structure
+## File structure
 
 ```
 zacess-pages/
-│
 ├── app/
 │   ├── api/
 │   │   └── quote/
@@ -191,38 +99,29 @@ zacess-pages/
 │   ├── globals.css             # terminal CSS variables and all terminal classes
 │   ├── layout.tsx              # root layout, font, metadata, ThemeProvider
 │   └── page.tsx                # page composition (Banner + Terminal + QuoteBar)
-│
 ├── components/
-│   ├── Banner.tsx              # under construction banner with image and links
-│   ├── QuoteBar.tsx            # daily motivation quote with auto-refresh
-│   ├── Terminal.tsx            # full terminal -- boot, input, history, commands
-│   ├── ThemeProvider.tsx       # next-themes wrapper
-│   └── ThemeToggle.tsx         # fixed top-right light/dark toggle
-│
+│   ├── Banner.tsx               # under construction banner with image and links
+│   ├── QuoteBar.tsx             # daily motivation quote with auto-refresh
+│   ├── Terminal.tsx             # full terminal: boot, input, history, commands
+│   ├── ThemeProvider.tsx        # next-themes wrapper
+│   └── ThemeToggle.tsx          # fixed top-right light/dark toggle
 ├── lib/
-│   └── commands.ts             # all command definitions and output lines
-│
+│   └── commands.ts              # all command definitions and output lines
 ├── public/
-│   ├── Isaac_Adjei_CV.pdf      # CV download target
-│   ├── underconstruction.jpg   # banner image
-│   └── logo.png                # favicon
-│
+│   ├── Isaac_Adjei_CV.pdf       # CV download target
+│   ├── underconstruction.jpg    # banner image
+│   └── logo.png                 # favicon
 ├── next.config.mjs
 ├── tailwind.config.ts
 ├── tsconfig.json
 └── README.md
 ```
 
----
+## Updating content
 
-<a id="updating-content"></a>
-## Updating Content
+All command output lives in `lib/commands.ts`. Each command is a `CommandDef` with a `lines` array of HTML strings, one string per output line. An empty string `''` inserts a blank spacer line.
 
-All command output lives in `lib/commands.ts`. Each command is a `CommandDef` with a `lines` array of HTML strings -- one string per output line. An empty string `''` inserts a blank spacer line.
-
-### Editing an existing command
-
-Find the command by name and edit its `lines` array:
+**Editing an existing command**: find it by name and edit its `lines` array.
 
 ```ts
 journey: {
@@ -235,9 +134,7 @@ journey: {
 },
 ```
 
-### Adding a new command
-
-**Step 1** - add the command to `COMMANDS` in `lib/commands.ts`:
+**Adding a new command**: add it to `COMMANDS` in `lib/commands.ts`, then add it to the `help` command's lines so it shows up in the help list. Tab completion picks it up automatically.
 
 ```ts
 mycommand: {
@@ -251,24 +148,7 @@ mycommand: {
 },
 ```
 
-**Step 2** - add it to the `help` command lines so it appears in the help list:
-
-```ts
-'  <span class="lbl">mycommand</span>   --  short description',
-```
-
-Tab completion picks it up automatically.
-
-### CSS classes available in output
-
-| Class | Colour | Use for |
-|---|---|---|
-| `lbl` | Cyan | Labels and section headers |
-| `arr` | Cyan | Arrow list items |
-| `err` | Red | Error messages |
-| `dim` | Grey | Hints and secondary info |
-
-### Adding a redirect command
+**Adding a redirect command**: set `redirect` to the target URL. A `mailto:` link opens in the same tab, anything else opens in a new one.
 
 ```ts
 mypage: {
@@ -281,20 +161,11 @@ mypage: {
 },
 ```
 
----
+CSS classes available in output: `lbl` (cyan, labels and section headers), `arr` (cyan, arrow list items), `err` (red, error messages), `dim` (grey, hints and secondary info).
 
-<a id="deployment"></a>
 ## Deployment
 
-Hosted on **Vercel**, connected to this GitHub repo. Every push to `main` triggers an automatic deployment. DNS is managed through **Cloudflare**.
-
-### Setup (already done)
-
-1. Vercel -- import GitHub repo -- Next.js auto-detected, no build config needed
-2. Custom domains added: `zacess.com`, `www.zacess.com`
-3. Cloudflare DNS updated to point to Vercel
-
-### To deploy an update
+Hosted on Vercel, connected to this GitHub repo. Every push to `main` triggers an automatic deployment. DNS is managed through Cloudflare, pointing `zacess.com` and `www.zacess.com` at Vercel. No environment variables are required, the ZenQuotes API is public and proxied through `/api/quote` with no key needed.
 
 ```bash
 git add .
@@ -304,46 +175,26 @@ git push
 
 Vercel picks it up within seconds.
 
-### Environment variables
-
-No environment variables are required. The ZenQuotes API is public and proxied through `/api/quote` with no key needed.
-
----
-
-<a id="roadmap"></a>
 ## Roadmap
 
 | Status | Item |
 |---|---|
-| ✅ Done | Terminal interface with boot sequence |
-| ✅ Done | Command history, tab autocomplete |
-| ✅ Done | Blinking cursor, line-by-line output |
-| ✅ Done | Rebuilt as Next.js 14 App Router |
-| ✅ Done | TypeScript, Tailwind CSS, next-themes |
-| ✅ Done | ZenQuotes API integration |
-| ✅ Done | Mac-style window controls |
-| ✅ Done | Mobile support |
-| ✅ Done | Favicon, easter egg commands |
-| ✅ Done | Vercel deployment + custom domain |
-| 🔄 In progress | Full zacess.com experience |
-| 🔜 Planned | Interactive projects showcase |
-| 🔜 Planned | Case studies and writeups |
-| 🔜 Planned | Something cool -- run: suggest |
+| Done | Terminal interface with boot sequence |
+| Done | Command history, tab autocomplete |
+| Done | Blinking cursor, line-by-line output |
+| Done | Next.js App Router rebuild, TypeScript, Tailwind CSS, next-themes |
+| Done | ZenQuotes API integration |
+| Done | Mac-style window controls |
+| Done | Mobile support |
+| Done | Favicon, easter egg commands |
+| Done | Vercel deployment with custom domain |
+| In progress | Full zacess.com experience |
+| Planned | Interactive projects showcase |
+| Planned | Case studies and writeups |
+| Planned | Something cool, run: `suggest` |
 
----
+## License and contact
 
-## Contact and Support
+Licensed under [PolyForm Noncommercial 1.0.0](LICENSE). See [NOTICE.md](NOTICE.md) for third-party media terms.
 
-Open an [issue](https://github.com/zaccesss/zacess-pages/issues) in this repository for questions or bugs.
-
-You can also reach me directly at [contact@isaacadjei.me](mailto:contact@isaacadjei.me) or via my [website contact page](https://isaacadjei.me/contact).
-
-<!-- Footer -->
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=80&section=footer" />
-</p>
-
-<p align="center">
-  Built by <a href="https://zacess.com"><strong>Isaac (Zac) Adjei</strong></a> --
-  <a href="mailto:contact@zacess.com">contact@zacess.com</a>
-</p>
+Open an [issue](https://github.com/zaccesss/zacess-pages/issues) in this repository for questions or bugs, or reach me at [contact@isaacadjei.me](mailto:contact@isaacadjei.me) or via my [website contact page](https://isaacadjei.me/contact).
