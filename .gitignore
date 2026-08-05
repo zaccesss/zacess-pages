@@ -21,7 +21,6 @@ out/
 secrets/
 credentials/
 
-
 # ── OS junk ────────────────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
