@@ -21,9 +21,6 @@ out/
 secrets/
 credentials/
 
-# ── Claude Code session data ───────────────────────────────────────────────────
-.claude/
-
 # ── OS junk ────────────────────────────────────────────────────────────────────
 .DS_Store
 Thumbs.db
