@@ -1,12 +1,12 @@
-// Each line is an HTML string. Empty string renders as a blank spacer line.
+// each line is an HTML string. Empty string renders as a blank spacer line.
 export type OutputLine = string
 
 export interface CommandDef {
   description: string
   lines: OutputLine[]
-  /** External URL to open after printing lines. mailto: opens in _self, https: in _blank. */
+  /** external URL to open after printing lines. mailto: opens in _self, https: in _blank. */
   redirect?: string
-  /** Built-in behaviours handled specially in the terminal */
+  /** built-in behaviours handled specially in the terminal */
   special?: 'clear' | 'cv' | 'suggest'
 }
 

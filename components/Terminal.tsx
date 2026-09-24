@@ -317,9 +317,9 @@ export default function Terminal() {
         if (!busy || mode === 'suggest') inputRef.current?.focus()
       }}
     >
-      {/* Titlebar */}
+      {/* titlebar */}
       <div className="terminal-titlebar">
-        {/* Traffic lights -- left */}
+        {/* traffic lights -- left */}
         <div className="flex gap-1.5 flex-shrink-0">
           <button
             type="button"
@@ -341,12 +341,12 @@ export default function Terminal() {
           />
         </div>
 
-        {/* Title -- centre */}
+        {/* title -- centre */}
         <span className="terminal-title flex-1 text-center">
           zacess@terminal -- bash -- 80x24
         </span>
 
-        {/* New terminal -- right */}
+        {/* new terminal -- right */}
         <button
           type="button"
           onClick={e => { e.stopPropagation(); resetTerminal() }}
@@ -357,7 +357,7 @@ export default function Terminal() {
         </button>
       </div>
 
-      {/* Content -- hidden when minimised */}
+      {/* content -- hidden when minimised */}
       {!minimised && (
         <>
           <div className="terminal-content" ref={outputRef}>
@@ -381,7 +381,7 @@ export default function Terminal() {
             })}
           </div>
 
-          {/* Input row */}
+          {/* input row */}
           <div className="terminal-input-area">
             <span className="mobile-tap-hint">tap to type</span>
             <span className="p-glyph">{prompt}</span>
