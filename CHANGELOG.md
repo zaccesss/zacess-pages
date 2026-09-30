@@ -13,3 +13,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - README License and contact section tidied into callouts.
+
+### Security
+
+- `brace-expansion` 1.1.21 and 5.0.12 in the lock file, fixing two denial of service advisories in the ESLint toolchain.
