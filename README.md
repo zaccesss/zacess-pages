@@ -1,7 +1,12 @@
 # zacess-pages
 
 [![License: PolyForm Noncommercial](https://img.shields.io/badge/license-PolyForm%20Noncommercial-blue)](LICENSE)
-[![Live: zacess.com](https://img.shields.io/badge/live-zacess.com-brightgreen)](https://zacess.com)
+[![Status: archived](https://img.shields.io/badge/status-archived-lightgrey)](https://zacess.com)
+
+> [!IMPORTANT]
+> Retired on 13 October 2026. zacess.com is now the site for Zacess, the free, open-source accessibility
+> reader, built in [zacesshq/website](https://github.com/zacesshq/website). This repo is kept read-only as
+> the history of the terminal landing page that used to live there.
 
 I built this as the landing page for [zacess.com](https://zacess.com) while I rebuild the full site. Instead of a static "under construction" page, it is a real terminal in the browser: boot sequence, blinking cursor, line-by-line output, command history and tab autocomplete, everything modelled after an actual CLI session rather than a styled page pretending to be one.
 
@@ -10,7 +15,7 @@ Most commands navigate to pages on my portfolio at [isaacadjei.me](https://isaac
 Built with Next.js App Router, TypeScript, Tailwind CSS and a server-side API route.
 
 > [!NOTE]
-> This is a placeholder, not the finished zacess.com. Type `status` in the terminal for the current build state or `help` for the full command list.
+> The terminal no longer runs anywhere. To try it, clone the repo and run `npm install` then `npm run dev`.
 
 ## Features
 
