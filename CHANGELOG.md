@@ -4,6 +4,12 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## 2026-10-13
+
+### Changed
+
+- Retired. zacess.com now serves the Zacess product site, built in zacesshq/website, so this terminal page no longer runs anywhere. The README explains how to run it locally and the repo is archived.
+
 ### Added
 
 - A transparent Zaccess mark under `public/brand`, as an SVG source plus 256, 512 and 1000px PNGs that read on light and dark backgrounds.
