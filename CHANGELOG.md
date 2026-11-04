@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 
 ## [Unreleased]
 
+## [2.1.0] - 2026-11-03
+
+### Added
+
+- A diagram in the README of the source pages, the Next.js build and the site as it was served on Vercel behind Cloudflare
+
+### Changed
+
+- The README describes the deployment and roadmap as they stand after the retirement
+- Routine tidy-up
+
 ## 2026-10-13
 
 ### Changed

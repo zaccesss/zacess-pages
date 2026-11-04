@@ -1,6 +1,7 @@
 # zacess-pages
 
-[![License: PolyForm Noncommercial](https://img.shields.io/badge/license-PolyForm%20Noncommercial-blue)](LICENSE)
+[![Release](https://img.shields.io/github/v/release/zaccesss/zacess-pages?label=release)](https://github.com/zaccesss/zacess-pages/releases/latest)
+[![Licence: PolyForm Noncommercial](https://img.shields.io/badge/licence-PolyForm%20Noncommercial-blue)](LICENSE)
 [![Status: archived](https://img.shields.io/badge/status-archived-lightgrey)](https://zacess.com)
 
 > [!IMPORTANT]
@@ -8,9 +9,33 @@
 > reader, built in [zacesshq/website](https://github.com/zacesshq/website). This repo is kept read-only as
 > the history of the terminal landing page that used to live there.
 
-I built this as the landing page for [zacess.com](https://zacess.com) while I rebuild the full site. Instead of a static "under construction" page, it is a real terminal in the browser: boot sequence, blinking cursor, line-by-line output, command history and tab autocomplete, everything modelled after an actual CLI session rather than a styled page pretending to be one.
+I built this as the landing page for [zacess.com](https://zacess.com) while the full site was still to come. Instead of a static "under construction" page, it is a real terminal in the browser: boot sequence, blinking cursor, line-by-line output, command history and tab autocomplete, everything modelled after an actual CLI session rather than a styled page pretending to be one.
 
 Most commands navigate to pages on my portfolio at [isaacadjei.me](https://isaacadjei.me) while a few run local interactions like downloading my CV, opening a mail client or collecting a suggestion. A daily motivation quote from the ZenQuotes API sits underneath the terminal and refreshes every 30 minutes.
+
+## How it was built and served
+
+```mermaid
+flowchart LR
+    subgraph SOURCE["Source pages"]
+        CMD["lib/commands.ts<br/>every command and its output lines"]
+        COMP["components/<br/>Terminal, Banner, QuoteBar, theme"]
+        APP["app/<br/>layout, page and the quote API route"]
+    end
+    subgraph BUILD["Build"]
+        NEXT["next build<br/>Next.js App Router, TypeScript, Tailwind CSS"]
+    end
+    subgraph SITE["Published site, retired October 2026"]
+        VERCEL["Vercel<br/>deployed on every push to main"]
+        CF["Cloudflare DNS<br/>zacess.com and www"]
+    end
+    CMD --> COMP --> APP --> NEXT
+    NEXT -- "pages and the API route" --> VERCEL
+    CF -- "pointed the domain at" --> VERCEL
+    VERCEL -- "/api/quote, refreshed every 30 minutes" --> ZEN["ZenQuotes API"]
+    VISITOR["Visitor"] -- "typed a command" --> VERCEL
+    VERCEL -- "most commands opened a page on" --> PORTFOLIO["isaacadjei.me"]
+```
 
 Built with Next.js App Router, TypeScript, Tailwind CSS and a server-side API route.
 
@@ -93,8 +118,8 @@ Keyboard shortcuts: `Enter` runs a command, `↑` and `↓` cycle history, `Tab`
 - **Font**: JetBrains Mono via `next/font/google`
 - **Theming**: next-themes, dark mode by default
 - **Quote API**: ZenQuotes, proxied through a Next.js API route to avoid CORS
-- **Deployment**: Vercel, auto-deploys on push to `main`
-- **DNS**: Cloudflare
+- **Deployment**: Vercel, which deployed every push to `main` while the page was live
+- **DNS**: Cloudflare, which now points zacess.com at the Zacess site instead
 
 ## File structure
 
@@ -116,7 +141,9 @@ zacess-pages/
 ├── lib/
 │   └── commands.ts              # all command definitions and output lines
 ├── public/
+│   ├── brand/                   # transparent Zaccess mark, SVG plus PNG sizes
 │   ├── Isaac_Adjei_CV.pdf       # CV download target
+│   ├── giphy.gif                # animation shown by an unlockable command
 │   ├── underconstruction.jpg    # banner image
 │   └── logo.png                 # favicon
 ├── next.config.mjs
@@ -173,15 +200,9 @@ CSS classes available in output: `lbl` (cyan, labels and section headers), `arr`
 
 ## Deployment
 
-Hosted on Vercel, connected to this GitHub repo. Every push to `main` triggers an automatic deployment. DNS is managed through Cloudflare, pointing `zacess.com` and `www.zacess.com` at Vercel. No environment variables are required, the ZenQuotes API is public and proxied through `/api/quote` with no key needed.
+While it was live the page was hosted on Vercel, connected to this GitHub repo. Every push to `main` triggered a deployment. DNS was managed through Cloudflare, pointing `zacess.com` and `www.zacess.com` at Vercel. No environment variables were needed: the ZenQuotes API is public and proxied through `/api/quote` with no key.
 
-```bash
-git add .
-git commit -m "your message"
-git push
-```
-
-Vercel picks it up within seconds.
+The Vercel project is gone, so a push changes nothing online. To run the page, use `npm run dev` locally or deploy the repo to a host of your own.
 
 ## Roadmap
 
@@ -196,10 +217,8 @@ Vercel picks it up within seconds.
 | Done | Mobile support |
 | Done | Favicon, easter egg commands |
 | Done | Vercel deployment with custom domain |
-| In progress | Full zacess.com experience |
-| Planned | Interactive projects showcase |
-| Planned | Case studies and writeups |
-| Planned | Something cool, run: `suggest` |
+| Superseded | Full zacess.com experience, now the Zacess site in [zacesshq/website](https://github.com/zacesshq/website) |
+| Dropped | Interactive projects showcase, case studies and the `suggest` ideas, retired with the page |
 
 ## License and contact
 
